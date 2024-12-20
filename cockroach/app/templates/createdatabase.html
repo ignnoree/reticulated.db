@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+{% block content %}
+        <h1>Get Keys</h1>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+            <div class="flash-message {{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %} 
+        
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" value="{{ email }}" required>
+            
+            <label for="verification_code">Verification Code</label>
+            <input type="text" id="verification_code" name="verification_code" placeholder="Enter the code (if received)">
+            {{form.recaptcha()}}
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+            
+        </form>
+        {% if key %}
+        <div class="key-container">
+            <h2>Your Key</h2>
+            <p style="word-break: break-word; color: #0f8a0f; font-weight: bold;">{{ key }}</p>
+        </div>
+        {% endif %}
+        {% if VError %}
+        <div class="key-container">
+            <p>{{ VError }}</p>
+            <p style="word-break: break-word; color: #0f8a0f; font-weight: bold;">{{ key }}</p>
+        </div>
+        {% endif %}    
+        {% endblock %}

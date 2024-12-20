@@ -1,0 +1,33 @@
+
+<body>
+    {% block menu %}                
+    {% include "navbar.html"%}
+{% endblock %}
+    
+    <div class="container">
+        <h1>Reticulated</h1>
+        <form action="/query_withkey" method="POST" enctype="multipart/form-data">
+         
+            <label for="key">Reticulated Key:</label>
+            <input type="text" id="input" name="key" placeholder="Key to your database" required>
+
+            
+            
+            
+
+                
+            <label for="input">Your Query (in plain language):</label>
+            <input type="text" id="input" name="input" placeholder="E.g., Get all users > 30" required>
+
+           
+    
+
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+           
+           
+            </div>
+        </form>
+    </div>
+</body>
+</html>

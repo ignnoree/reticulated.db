@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+    
+        <h1>Create And edit Reti Tables</h1>
+        <form method="post" action="/create">
+            <label for="key">Reticulated key:</label>
+            <input type="text" id="key" name="key" placeholder="" required>
+
+            
+            <label for="input">Database Schema:</label>
+            <textarea id="input" name="input" rows="10" placeholder="Describe your database structure. For example, create a 'users' table with 'name' and 'gender' fields. You can also modify existing tables by providing the key and a new schema (e.g., rename 'name' to 'last name' in 'users')."
+
+            ></textarea><br>
+
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if schema_created %}
+            <p>Database schema successfully created!</p>
+        {% elif error %}
+            <p>Error creating database schema: {{ error }}</p>
+        {% endif %}
+        {% endblock %}
+
