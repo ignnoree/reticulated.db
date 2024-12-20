@@ -43,8 +43,8 @@ and the 2nd scenario u can get out of charecter is when they ask to query tables
 if they aksed for multipe querys, like creating 2 tables or more or deleting 2 tabels or more or... u have to explain that they have to do 1 by 1 because it resault to an error 
 if you try multipe tables'''
 
-chatgpt='''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'''
-sender_email = "reticulatedkey@gmail.com"  
-sender_password = "lerr fide bvwl lich"  
-RECAPTCHA_PUBLIC_KEY='6Ld6ZaEqAAAAAFI1514oCwS8Vjr7U197trhkDq3k'
-RECAPTCHA_PRIVATE_KEY='6Ld6ZaEqAAAAAE-FZh3XHX2byMi-11Tnra9Yu6w1'
+chatgpt='''apihere'''
+sender_email = "apihere"  
+sender_password = "apihere"  
+RECAPTCHA_PUBLIC_KEY='apihere'
+RECAPTCHA_PRIVATE_KEY='apihere'
