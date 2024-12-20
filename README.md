@@ -59,6 +59,4 @@ Small business owners needing simple data management tools.
 
 Students looking for a hands-on way to manage data projects.
 
-Get Started Today
 
-Take control of your data in the easiest way possible. Say goodbye to SQL and hello to simplicity!
